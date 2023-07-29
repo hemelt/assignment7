@@ -1,0 +1,22 @@
+service:web
+ image: Nginx
+    port:80
+    volume:html
+service:db
+ image: MySQL
+   environment
+    MYSQL_ROOT_PASSWORD=mysecretpassword
+    MYSQL_DATABASE=mydatabase
+     Volume:data
+users:
+   folder:/structure
+    user:root
+    permissions:777
+   file:structure/sync-work
+     user:sync
+   file:structure/nobody-work
+     user:nobody
+   collin:UID 5000
+  
+
+  

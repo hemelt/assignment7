@@ -1,13 +1,13 @@
-service:web
+services:
+ web:
  image: Nginx
     port:80
     volume:html
-service:db
+ db:
  image: MySQL
    environment
     MYSQL_ROOT_PASSWORD=mysecretpassword
-    MYSQL_DATABASE=mydatabase
-     Volume:data
+    MYSQL_DATABASE=mydatabas
 users:
    folder:/structure
     user:root
